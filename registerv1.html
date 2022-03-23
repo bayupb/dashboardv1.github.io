@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page - Templatebay</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/css/font-quicksand.css">
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm p-4 fixed top-0 w-full">
+        <div class="flex justify-center items-center">
+            <a href="/index.html" class="flex gap-3 items-center hover:text-gray-900 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-bounce duration-300" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+                </svg>
+                <span>Back to dashboard</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="items-center max-w-md container mx-auto justify-center lg:px-0 px-5 ">
+        <div class="my-20">
+            <div class="my-4 text-center">
+                <span class="lg:text-3xl text-2xl font-bold tracking-widest">Templatebay <span class="bg-gray-900 px-3 py-1 rounded-md text-white">Register</span></span>
+            </div>
+            <div class="bg-white shadow-sm rounded-md p-4 flex flex-col space-y-3">
+                <form class="w-full">
+                    <div class="my-2 flex flex-col gap-3">
+                        <label class="text-base font-medium">Username</label>
+                        <input type="text" class="form-input block py-2 rounded-sm" placeholder="Username">
+                    </div>
+                    <div class="my-2 flex flex-col gap-3">
+                        <label class="text-base font-medium">Email</label>
+                        <input type="email" class="form-input block py-2 rounded-sm" placeholder="Email">
+                    </div>
+                    <div class="my-2 flex flex-col gap-3">
+                        <label class="text-base font-medium">Password</label>
+                        <input type="password" class="form-input block py-2 rounded-sm" placeholder="Password">
+                    </div>
+                    <div class="my-2 flex flex-col gap-3">
+                        <label class="text-base font-medium">Confirm Password</label>
+                        <input type="password" class="form-input block py-2 rounded-sm" placeholder="Confirrm Password">
+                    </div>
+                    <div class="flex justify-between items-center mt-5">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" class="form-input block py-2 rounded-sm"> Remember
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="bg-gray-900 px-3 tex-sm flex hover:bg-gray-500 py-2 rounded-md text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                </svg>
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="grid grid-cols-1 gap-4 my-5">
+                    <div>
+                        <button class="bg-red-900 rounded-md p-3 w-full">
+                            <span class="text-base text-white">Google</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="bg-gray-600 rounded-md p-3 w-full">
+                            <span class="text-base text-white">Github</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="bg-blue-900 rounded-md p-3 w-full">
+                            <span class="text-base text-white">Facebook</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                    <a href="forgotpassword.html" class="text-base font-medium hover:text-red-900">Forgot password?</a>
+                    <a href="loginv1.html" class="text-base font-medium hover:text-green-900">I have account, login?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

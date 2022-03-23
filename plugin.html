@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scrolling">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Page - Templatebay</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/css/font-quicksand.css">
+    <link rel="stylesheet" href="dist/css/prism.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen overflow-y-scroll" x-data="{OpenNavbar: false}">
+
+    <div class="flex flex-grow">
+        <aside
+            :class="{'translate-x-0 ease-in-out opacity-100 h-full overflow-y-scroll' : OpenNavbar === true, '-translate-x-full w-full opacity-0 ease-out' : OpenNavbar === false}"
+            @show="OpenNavbar === !OpenNavbar" class="inset-0 transform lg:transform-none lg:opacity-100
+        duration-200 lg:h-screen lg:sticky absolute lg:top-0 bg-white lg:w-64 w-64 z-20 ">
+            <div class="h-screen">
+                <div class="bg-gray-900 text-white p-4 sticky flex lg:justify-center justify-between items-center top-0 w-full">
+                    <span class="text-xl font-semibold">TemplateBay</span>
+                    <button @click="OpenNavbar = !OpenNavbar" class="lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 gap-4 mt-5 p-4 overflow-y-scroll md:min-h-full h-screen bg-white">
+                    <div class="flex flex-col">
+                        <span class="text-xs font-thin tracking-widest">General</span>
+                        <a href="/" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            <span class="text-span-menu-page">Dashboard</span>
+                        </a>
+                    </div>
+                    <div class="flex flex-col  lg:mt-4 mt-3 space-y-3">
+                        <span class="text-xs font-thin tracking-widest">Examples</span>
+                        <a href="form.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                            <span class="text-span-menu-page">Form</span>
+                        </a>
+                        <a href="tables.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-span-menu-page">Tables</span>
+                        </a>
+                        <a href="chartjs.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                            </svg>
+                            <span class="text-span-menu-page">Chatjs</span>
+                        </a>
+                        <a href="iframes.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-span-menu-page">Iframes</span>
+                        </a>
+                        <a href="blank-page.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-span-menu-page">Blank Page</span>
+                        </a>
+                        <a href="typography.html" class="non-active-page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                            <span class="text-span-menu-page">Typography</span>
+                        </a>
+                        <div class="space-y-3" x-data="{selectPage : null,
+                                    SubMenuAktif: 'submenu-active-page',
+                                    SubMenuTidak: 'submenu-non-active-page'}">
+                            <!-- elements -->
+                            <div class="w-full">
+                                <button type="button"
+                                    @click="selectPage !== 'elements' ? selectPage = 'elements' : selectPage = null "
+                                    :class=" selectPage == 'elements' ? SubMenuAktif : SubMenuTidak ">
+                                    <div class="flex gap-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                                        </svg>
+                                        <span class=" text-span-menu-page">Elements</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        :class="{'rotate-180': selectPage == 'elements'}" class="h-3 w-3" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div class="grid grid-cols-1 gap-4 mt-2 duration-150 transition"
+                                    x-show="selectPage == 'elements'"
+                                    x-transition:enter="transition ease-out duration-300"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-300"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+
+                                    <div class="relative">
+                                        <a href="button.html" class=" non-active-page submenu-child-a">
+
+                                            <span class="text-span-menu-page">Button</span>
+                                        </a>
+                                    </div>
+                                    <a href="alert.html" class=" non-active-page submenu-child-a">
+
+                                        <span class="text-span-menu-page">Alert</span>
+                                    </a>
+                                    <a href="tabs.html" class=" non-active-page submenu-child-a">
+
+                                        <span class="text-span-menu-page">Tabs</span>
+                                    </a>
+                                    <a href="timeline.html" class=" non-active-page submenu-child-a">
+
+                                        <span class="text-span-menu-page">Timeline</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- pages -->
+                            <div clas s="w-full">
+                                <button type="button"
+                                    @click="selectPage !== 'pages' ? selectPage = 'pages' : selectPage = null "
+                                    :class=" selectPage == 'pages' ? SubMenuAktif : SubMenuTidak ">
+                                    <div class="flex gap-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                                        </svg>
+                                        <span class=" text-span-menu-page">Page</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        :class="{'rotate-180': selectPage == 'pages'}" class="h-3 w-3" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="grid grid-cols-1 gap-4 mt-2" x-show="selectPage == 'pages'"
+                                    x-transition:enter="transition ease-out duration-300"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-300"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+                                    <a href="invoice.html" class=" non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Invoice</span>
+                                    </a>
+                                    <a href="profile.html" class=" non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Profile</span>
+                                    </a>
+                                    <a href="contact.html" class=" non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Contact</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- extra -->
+                            <div class="w-full">
+                                <button type="button"
+                                    @click="selectPage !== 'extrapage' ? selectPage = 'extrapage': selectPage = null "
+                                    :class=" selectPage == 'extrapage' ? SubMenuAktif : SubMenuTidak ">
+                                    <div class="flex gap-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                        </svg>
+                                        <span class=" text-span-menu-page">Extra</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        :class="{'rotate-180': selectPage == 'extrapage'}" class="h-3 w-3" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="grid grid-cols-1 gap-4 mt-2" x-show="selectPage == 'extrapage'"
+                                    x-transition:enter="transition ease-out duration-300"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-300"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+                                    <a href="loginv1.html" class="non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Login</span>
+                                    </a>
+                                    <a href="registerv1.html" class="non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Register</span>
+                                    </a>
+                                    <a href="forgotpassword.html" class="non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Forgot Password</span>
+                                    </a>
+                                    <a href="404.html" class="non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Error 404</span>
+                                    </a>
+                                    <a href="505.html" class="non-active-page submenu-child-a">
+                                        <span class="text-span-menu-page">Error 505</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="plugin.html" class="active-page">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                                <span class="text-span-menu-page">Plugin</span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- download -->
+                    <div class="flex flex-col my-4 space-y-3">
+                        <span class="text-xs font-thin tracking-widest">Download</span>
+                        <a href="#" class="bg-blue-900 p-2 rounded-md text-white flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            <span class="text-span-menu-page">Github</span>
+                        </a>
+                        <a href="#" class="bg-red-900 p-2 rounded-md text-white flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="text-span-menu-page">Trakter Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <div class="w-full overflow-y-scroll h-screen">
+            <div
+                class="flex sticky top-0 z-10 lg:justify-end justify-between items-center bg-white shadow-sm py-3 px-10">
+                <div>
+                    <button class="lg:hidden" @click="OpenNavbar = true">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <div class="flex items-center gap-3 border-l lg:px-4 px-2">
+                        <img src="dist/img/person-1.png" class="h-8 w-8 rounded-full">
+                        <span class="text-gray-900 text-sm">John Doe</span>
+                    </div>
+                    <div class="border-l px-4" x-data="{NotificationMenu : false}">
+                        <div class="relative">
+                            <div class="absolute px-2 py-1 text-white bg-red-500 left-3 -top-2 rounded-full text-xs">2
+                            </div>
+
+                        </div>
+                        <button @click="NotificationMenu = !NotificationMenu" x-on:mouseover="NotificationMenu = true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                            </svg>
+                        </button>
+                        <div class="bg-white shadow-sm rounded-sm p-4 absolute lg:right-16 right-5 lg:px-0 px-5 mt-5"
+                            x-show.away="NotificationMenu == true" x-on:mouseleave="NotificationMenu = false">
+                            <div class="grid grid-cols-1 divide-y-0 gap-2 px-5 w-80">
+                                <div class="flex gap-4 items-center  overflow-hidden ">
+                                    <img src="dist/img/person-1.png" class="h-10 w-10 bg-cover bg-center rounded-full">
+                                    <div class="flex gap-3 flex-col ">
+                                        <h3>
+                                            <a href="#" class="text-base font-semibold">
+                                                Bayu priyambada
+                                            </a>
+                                            <p class="text-sm font-normal truncate">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquid?
+                                                Facilis amet eos blanditiis aspernatur! Consequuntur hic quidem unde
+                                                est.
+                                            </p>
+                                            <span class="flex gap-2 mt-2 items-center text-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                4 Hours Ago
+                                            </span>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 items-center  overflow-hidden ">
+                                    <img src="dist/img/person2.png" class="h-10 w-10 bg-cover bg-center rounded-full">
+                                    <div class="flex gap-3 flex-col ">
+                                        <h3>
+                                            <a href="#" class="text-base font-semibold">
+                                                Bayu priyambada
+                                            </a>
+                                            <p class="text-sm font-normal truncate">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquid?
+                                                Facilis amet eos blanditiis aspernatur! Consequuntur hic quidem unde
+                                                est.
+                                            </p>
+                                            <span class="flex gap-2 mt-2 items-center text-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                4 Hours Ago
+                                            </span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mt-5">
+                            <span class="text-center flex justify-center items-center mt-2">
+                                <a href="#" class="text-sm hover:text-gray-500">All Messages</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="border-l px-4">
+                        <button @click="NavigationMenu = true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <section class="p-5 h-screen overflow-y-scroll">
+                <div class="bg-white shadow-sm rounded-md p-4 flex">
+                    <span class="text-base font-semibold">
+                        Plugin Page
+                    </span>
+                </div>
+
+                <!-- content page -->
+                <div>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <!-- font family -->
+                        <div class="shadow-md rounded-lg overflow-hidden bg-white">
+                            <div class="py-3 px-5 text-base font-bold bg-gray-900 text-white">
+                                Plugin Requirements
+                            </div>
+                            <div class="p-4">
+                                <!-- result -->
+                                <div>
+                                    <div class="grid grid-cols-1 gap-3">
+                                        <div>
+                                            <pre class="language-html"><code>&lt;a href=&quot;https://sweetalert2.github.io/&quot;&gt;SweetAlert2&lt;/a&gt;
+&lt;a href=&quot;https://github.com/CodeSeven/toastr&quot;&gt;Toasttr&lt;/a&gt;
+&lt;a href=&quot;https://jquery.com/&quot;&gt;Jquery&lt;/a&gt;
+&lt;a href=&quot;https://prismjs.com/&quot;&gt;Prims Js&lt;/a&gt;
+&lt;a href=&quot;https://alpinejs.dev/&quot;&gt;Alpine Js&lt;/a&gt;
+&lt;a href=&quot;https://tailwindcss.com/&quot;&gt;Tailwindcss&lt;/a&gt;
+&lt;a href=&quot;https://www.chartjs.org/docs/latest/charts/line.html&quot;&gt;Line Chat Js&lt;/a&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+<script src="dist/js/alpine.js"></script>
+<script src="dist/js/cdn-chart.js"></script>
+<script src="dist/js/chart.js"></script>
+<script src="dist/js/prism.js"></script>
+
+</html>
